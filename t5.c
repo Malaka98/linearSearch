@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define size 2;
+#define size 2
 
 struct store{
 
     int item_number;
-    char item_name[];
+    char item_name[20];
     int item_price;
 
 }item[size];
 
-insert_data(void);
+void insert_data(void);
 int linear_search(int);
 
 int main(void) {
@@ -24,7 +24,7 @@ int main(void) {
     printf("Enter search item number: ");
     scanf("%d", &sk);
 
-    pos = linear_search();
+    pos = linear_search(sk);
 
     if(pos==-1) {
 
